@@ -1,3 +1,4 @@
+/* CSS header side bare et forme d */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,7 +60,7 @@ header {
   max-width: 100%; /* L'image ne dépassera jamais la largeur de son conteneur */
   height: auto; /* Maintient les proportions de l'image */
   display: block; /* Évite les espaces blancs autour de l'image */
-  width: 100px; /* Largeur par défaut du logo */
+  width: 170px; /* Largeur par défaut du logo */
 }
 
 
@@ -126,15 +127,14 @@ section {
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
   
-    .header-icons {
-      gap: 1rem;
-    }
+  .header-icons {
+    gap: 1rem;
   }
 
   .sidebar {
@@ -171,7 +171,6 @@ section {
     display: block;
   }
   
-
 }
 
 .search-form {

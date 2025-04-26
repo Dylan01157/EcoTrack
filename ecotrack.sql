@@ -87,6 +87,22 @@ CREATE TABLE Question (
     FOREIGN KEY(id_categorie) REFERENCES Categorie(id_categorie)
 ); 
 
+
+/*-- Table pour les réponses correctes aux questions --*/
+-- Cette table enregistre les réponses correctes pour chaque question   
+-- Je l'ai créée pour faciliter la gestion des réponses correctes et éviter de les stocker dans la table Question, elle est modifiable si bhesoin
+-- On peut aussi envisager de stocker les réponses correctes directement dans la table Question, mais cela pourrait rendre la gestion des réponses plus complexe
+CREATE TABLE Bonne_Reponse (
+    id_bonne_reponse INT AUTO_INCREMENT PRIMARY KEY,
+    id_question VARCHAR(50) NOT NULL,
+    texte_bonne_reponse VARCHAR(250) NOT NULL,
+    FOREIGN KEY(id_question) REFERENCES Question(id_question)
+);
+
+
+
+
+
 CREATE TABLE Reponse (
     id_reponse VARCHAR(50) PRIMARY KEY,
     id_question VARCHAR(50),
@@ -154,11 +170,8 @@ CREATE TABLE Score_Hebdomadaire (
 );
 
  
- 
- 
- 
- 
- 
+/* Script d'insertion de données pour la base de données EcoTrack
+-- Ce script insère des données d'exemple dans les tables créées ci-dessus pour tester l'application EcoTrack
  
  
  
