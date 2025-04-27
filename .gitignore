@@ -1,5 +1,5 @@
 # Fichiers de configuration de la base de données
-db_connect.php
+example_dbconnect.php
 config.php
 *.conf.php
 
