@@ -1,3 +1,38 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecotrackDB";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("La connexion a échoué : " . $conn->connect_error);
+}
+
+$sql = "
+    SELECT c.nom_categorie, SUM(sh.score_total) as score_total
+    FROM Score_Hebdomadaire sh
+    JOIN Categorie c ON sh.id_categorie = c.id_categorie
+    WHERE sh.id_utilisateur = 'U001'
+    GROUP BY c.id_categorie
+";
+
+$result = $conn->query($sql);
+
+// Stocker les résultats dans un tableau
+$categories = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $categories[] = $row;
+    }
+} else {
+    $categories = [];
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <!-- Si besoin pour récupérer le header et la sidebar il suffit de prendre le code d'ici à...() -->
 <html lang="fr">
@@ -68,26 +103,27 @@
       <a href="../profil/index.html" class="menu-item"><i class="bi bi-person-circle me-2"></i> Profil</a>
     </div>
   </nav>
-    <main class="content">
-      <div class="cards-container">
-        <div class="card" id="card1">
-            <h3 id="category1"></h3>
-            <p id="score1"></p>
-        </div>
-        <div class="card" id="card2">
-            <h3 id="category2"></h3>
-            <p id="score2"></p>
-        </div>
-        <div class="card" id="card3">
-            <h3 id="category3"></h3>
-            <p id="score3"></p>
-        </div>
-        <div class="card" id="card4">
-            <h3 id="category4"></h3>
-            <p id="score4"></p>
-        </div>
-    </div>
-    </main>
+  <main class="content">
+  <div class="cards-container">
+    <?php
+    $cardIndex = 1;
+    if (!empty($categories)) {
+        foreach ($categories as $categorie) {
+            echo '
+            <div class="card" id="card' . $cardIndex . '" style="width: 18rem; margin: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">' . htmlspecialchars($categorie['nom_categorie']) . '</h5>
+                    <p class="card-text">Score: ' . htmlspecialchars($categorie['score_total']) . '</p>
+                </div>
+            </div>';
+            $cardIndex++;
+        }
+    } else {
+        echo "Aucun score trouvé pour Pierre.";
+    }
+    ?>
+  </div>
+</main>
 
     <script src="script.js"></script>
 
