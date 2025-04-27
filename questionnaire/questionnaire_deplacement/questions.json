@@ -1,0 +1,72 @@
+[
+    {
+      "id": "question_deplacement_1",
+      "question": "Quel mode de transport utilisez-vous principalement au quotidien ?",
+      "reponses": [
+        { "texte": "Marche à pied ou vélo", "points": 10 },
+        { "texte": "Transports en commun", "points": 7 },
+        { "texte": "Covoiturage", "points": 4 },
+        { "texte": "Voiture individuelle", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_deplacement_2",
+      "question": "Quelle distance parcourez-vous en moyenne chaque jour ?",
+      "reponses": [
+        { "texte": "Moins de 5 km", "points": 10 },
+        { "texte": "Entre 5 et 15 km", "points": 7 },
+        { "texte": "Entre 15 et 30 km", "points": 4 },
+        { "texte": "Plus de 30 km", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_deplacement_3",
+      "question": "Si vous utilisez une voiture, quel est son type de motorisation ?",
+      "reponses": [
+        { "texte": "Électrique", "points": 10 },
+        { "texte": "Hybride", "points": 7 },
+        { "texte": "Essence récente", "points": 4 },
+        { "texte": "Diesel ancienne", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_deplacement_4",
+      "question": "Combien de trajets en avion effectuez-vous par an ?",
+      "reponses": [
+        { "texte": "Aucun", "points": 10 },
+        { "texte": "1 trajet court-courrier", "points": 7 },
+        { "texte": "1-2 trajets moyen-courrier", "points": 4 },
+        { "texte": "Plusieurs ou long-courrier", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_deplacement_5",
+      "question": "Pratiquez-vous l'éco-conduite (si vous conduisez) ?",
+      "reponses": [
+        { "texte": "Oui, systématiquement", "points": 10 },
+        { "texte": "Oui, souvent", "points": 7 },
+        { "texte": "Parfois", "points": 4 },
+        { "texte": "Rarement ou jamais", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_deplacement_6",
+      "question": "À quelle fréquence entretenez-vous votre véhicule ?",
+      "reponses": [
+        { "texte": "Régulièrement, selon recommandations", "points": 10 },
+        { "texte": "Assez régulièrement", "points": 7 },
+        { "texte": "Occasionnellement", "points": 4 },
+        { "texte": "Rarement ou quand il y a un problème", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_deplacement_7",
+      "question": "Accepteriez-vous de changer vos habitudes de déplacement pour réduire votre impact ?",
+      "reponses": [
+        { "texte": "Oui, totalement", "points": 10 },
+        { "texte": "Oui, si c'est pratique", "points": 7 },
+        { "texte": "Peut-être, à certaines conditions", "points": 4 },
+        { "texte": "Non, c'est trop contraignant", "points": 1 }
+      ]
+    }
+] 

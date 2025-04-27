@@ -16,7 +16,7 @@ if ($data && isset($data['id_utilisateur']) && isset($data['reponses']) && isset
 
     foreach ($reponses as $index => $reponse) {
         $id_reponse = uniqid('R');
-        $id_question = 'Q_ALIM_' . ($index + 1);
+        $id_question = 'Q_NUM_' . ($index + 1);
         $texte_reponse = $reponse['reponseTexte'];
         $date_reponse = date('Y-m-d H:i:s');
         $en_cours = 0;
@@ -39,7 +39,7 @@ if ($data && isset($data['id_utilisateur']) && isset($data['reponses']) && isset
             INSERT INTO Consommation (id_utilisateur, categorie, valeur, date_enregistrement)
             VALUES (?, ?, ?, ?)
         ");
-        $stmt->execute([$id_utilisateur, 'alimentation', $consommation, date('Y-m-d H:i:s')]);
+        $stmt->execute([$id_utilisateur, 'numerique', $consommation, date('Y-m-d H:i:s')]);
     } catch (PDOException $e) {
         // Si la table n'existe pas encore, on ignore l'erreur mais on avertit
         echo "✅ Réponses enregistrées avec succès ! (Note: consommation non enregistrée - " . $e->getMessage() . ")";

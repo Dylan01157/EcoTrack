@@ -1,0 +1,72 @@
+[
+    {
+      "id": "question_numerique_1",
+      "question": "Combien d'heures passez-vous sur des appareils numériques par jour ?",
+      "reponses": [
+        { "texte": "Moins de 2 heures", "points": 10 },
+        { "texte": "Entre 2 et 4 heures", "points": 7 },
+        { "texte": "Entre 4 et 6 heures", "points": 4 },
+        { "texte": "Plus de 6 heures", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_numerique_2",
+      "question": "À quelle fréquence renouvelez-vous vos appareils électroniques ?",
+      "reponses": [
+        { "texte": "Tous les 5 ans ou plus", "points": 10 },
+        { "texte": "Tous les 3-4 ans", "points": 7 },
+        { "texte": "Tous les 2 ans", "points": 4 },
+        { "texte": "Chaque année", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_numerique_3",
+      "question": "Éteignez-vous complètement vos appareils la nuit ?",
+      "reponses": [
+        { "texte": "Oui, tous systématiquement", "points": 10 },
+        { "texte": "Oui, la plupart", "points": 7 },
+        { "texte": "Seulement quelques-uns", "points": 4 },
+        { "texte": "Non, jamais", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_numerique_4",
+      "question": "Utilisez-vous des solutions de stockage cloud ?",
+      "reponses": [
+        { "texte": "Rarement ou jamais", "points": 10 },
+        { "texte": "Occasionnellement", "points": 7 },
+        { "texte": "Régulièrement", "points": 4 },
+        { "texte": "Très fréquemment", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_numerique_5",
+      "question": "Pratiquez-vous le nettoyage numérique (suppression des emails, fichiers inutiles) ?",
+      "reponses": [
+        { "texte": "Oui, régulièrement", "points": 10 },
+        { "texte": "Oui, occasionnellement", "points": 7 },
+        { "texte": "Rarement", "points": 4 },
+        { "texte": "Jamais", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_numerique_6",
+      "question": "Utilisez-vous des réglages d'économie d'énergie sur vos appareils ?",
+      "reponses": [
+        { "texte": "Oui, sur tous mes appareils", "points": 10 },
+        { "texte": "Sur la plupart", "points": 7 },
+        { "texte": "Sur quelques-uns", "points": 4 },
+        { "texte": "Non", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_numerique_7",
+      "question": "Quelle est la qualité de streaming vidéo que vous utilisez habituellement ?",
+      "reponses": [
+        { "texte": "SD / Basse qualité", "points": 10 },
+        { "texte": "HD", "points": 7 },
+        { "texte": "Full HD", "points": 4 },
+        { "texte": "4K / Ultra HD", "points": 1 }
+      ]
+    }
+] 

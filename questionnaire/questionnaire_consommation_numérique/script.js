@@ -87,26 +87,26 @@ function showEndMessage() {
     const questionId = questions.find(q => q.question === answer.question).id;
     
     switch(questionId) {
-      case "question_alimentation_1": // Viande ou poisson
-        consommation += (10 - answer.points) * 2; // Plus de viande = plus de consommation
+      case "question_numerique_1": // Heures d'écran
+        consommation += (10 - answer.points) * 2.3; // Plus d'heures = plus de consommation
         break;
-      case "question_alimentation_2": // Produits locaux
-        consommation += (10 - answer.points) * 1.5; // Moins local = plus de consommation
+      case "question_numerique_2": // Renouvellement appareils
+        consommation += (10 - answer.points) * 2.5; // Renouvellement fréquent = plus de consommation
         break;
-      case "question_alimentation_3": // Produits frais
-        consommation += (10 - answer.points) * 1.2; // Moins frais = plus de consommation
+      case "question_numerique_3": // Extinction appareils
+        consommation += (10 - answer.points) * 1.7; // Appareils toujours allumés = plus de consommation
         break;
-      case "question_alimentation_4": // Gaspillage
-        consommation += (10 - answer.points) * 1.8; // Plus de gaspillage = plus de consommation
+      case "question_numerique_4": // Stockage cloud
+        consommation += (10 - answer.points) * 1.8; // Plus de cloud = plus de consommation
         break;
-      case "question_alimentation_5": // Boisson
-        consommation += (10 - answer.points) * 1.3; // Boissons industrielles = plus de consommation
+      case "question_numerique_5": // Nettoyage numérique
+        consommation += (10 - answer.points) * 1.5; // Moins de nettoyage = plus de consommation
         break;
-      case "question_alimentation_6": // Repas végétarien
-        consommation += (10 - answer.points) * 2.2; // Moins végétarien = plus de consommation
+      case "question_numerique_6": // Économie d'énergie
+        consommation += (10 - answer.points) * 1.9; // Moins d'économie = plus de consommation
         break;
-      case "question_alimentation_7": // Contenant réutilisable
-        consommation += (10 - answer.points) * 1.4; // Jetable = plus de consommation
+      case "question_numerique_7": // Qualité streaming
+        consommation += (10 - answer.points) * 2.1; // Meilleure qualité = plus de consommation
         break;
     }
   });
@@ -129,7 +129,7 @@ function showEndMessage() {
       <h3>Votre Score 🌱</h3>
       <p>${totalScore} / 70 points</p>
       <p>Votre empreinte carbone estimée : <strong>${scoreCO2} kg CO2</strong></p>
-      <p>Votre consommation estimée : <strong>${consommation} unités</strong></p>
+      <p>Votre consommation numérique estimée : <strong>${consommation} unités</strong></p>
       <p>Ne vous découragez pas, chaque geste compte ! 🌍</p>
     </div>
     <a href="/EcoTrack/dashboard/dashboard.php" class="btn btn-primary mt-3">Retour au Dashboard</a>
@@ -171,4 +171,4 @@ document.addEventListener('DOMContentLoaded', () => {
   answerButtons.forEach(button => {
     button.addEventListener('click', handleAnswerClick);
   });
-});
+}); 

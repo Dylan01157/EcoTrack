@@ -1,0 +1,72 @@
+[
+    {
+      "id": "question_voyage_1",
+      "question": "Combien de voyages longue distance (> 300 km) effectuez-vous par an ?",
+      "reponses": [
+        { "texte": "Aucun", "points": 10 },
+        { "texte": "1 voyage", "points": 7 },
+        { "texte": "2-3 voyages", "points": 4 },
+        { "texte": "4 voyages ou plus", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_voyage_2",
+      "question": "Quel moyen de transport privilégiez-vous pour vos voyages ?",
+      "reponses": [
+        { "texte": "Train ou bus", "points": 10 },
+        { "texte": "Voiture partagée", "points": 7 },
+        { "texte": "Voiture individuelle", "points": 4 },
+        { "texte": "Avion", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_voyage_3",
+      "question": "Privilégiez-vous le tourisme local ou les destinations lointaines ?",
+      "reponses": [
+        { "texte": "Uniquement local (<200km)", "points": 10 },
+        { "texte": "National", "points": 7 },
+        { "texte": "Européen", "points": 4 },
+        { "texte": "International lointain", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_voyage_4",
+      "question": "Quel type d'hébergement choisissez-vous généralement ?",
+      "reponses": [
+        { "texte": "Éco-lodges/Camping", "points": 10 },
+        { "texte": "Location chez l'habitant", "points": 7 },
+        { "texte": "Hôtel standard", "points": 4 },
+        { "texte": "Hôtel de luxe/Resort", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_voyage_5",
+      "question": "Quelle est votre consommation de souvenirs et produits touristiques ?",
+      "reponses": [
+        { "texte": "Aucun achat", "points": 10 },
+        { "texte": "Quelques produits locaux", "points": 7 },
+        { "texte": "Achats réguliers", "points": 4 },
+        { "texte": "Shopping important", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_voyage_6",
+      "question": "Comment choisissez-vous vos activités de loisirs hebdomadaires ?",
+      "reponses": [
+        { "texte": "Activités en plein air sans équipement", "points": 10 },
+        { "texte": "Activités locales peu consommatrices", "points": 7 },
+        { "texte": "Activités nécessitant des déplacements", "points": 4 },
+        { "texte": "Activités à forte empreinte carbone", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_voyage_7",
+      "question": "Seriez-vous prêt à modifier vos habitudes de voyage pour réduire votre impact ?",
+      "reponses": [
+        { "texte": "Oui, totalement", "points": 10 },
+        { "texte": "Oui, dans une certaine mesure", "points": 7 },
+        { "texte": "Peut-être, si c'est facile", "points": 4 },
+        { "texte": "Non, c'est trop contraignant", "points": 1 }
+      ]
+    }
+] 
