@@ -1,36 +1,30 @@
 function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-  
-    sidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
-  }
-  
-  
-  // Animation au scroll
-  const faders = document.querySelectorAll('[data-animate]');
-  
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.2,
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+// Animation au scroll
+const faders = document.querySelectorAll('[data-animate]');
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   });
-  
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-  
+}, { threshold: 0.2 });
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
 // === Ton ancien code sidebar / animation reste inchangé ===
 
 // Variables globales
-let questions = []; 
+let questions = [];
 let currentQuestionIndex = 0;
-let userAnswers = []; // <-- NOUVEAU : tableau pour stocker les réponses de l'utilisateur
+let userAnswers = [];
 
 // Fonction pour charger les questions depuis le JSON
 async function loadQuestions() {
@@ -42,12 +36,9 @@ async function loadQuestions() {
 // Fonction pour afficher une question
 function showQuestion() {
   const question = questions[currentQuestionIndex];
-
-  // Modifier la question
   const questionTitle = document.querySelector('.question-block h2');
   questionTitle.textContent = question.question;
 
-  // Modifier les réponses
   const answerButtons = document.querySelectorAll('.answer-button');
   question.reponses.forEach((reponse, index) => {
     if (answerButtons[index]) {
@@ -59,7 +50,6 @@ function showQuestion() {
 // Fonction pour gérer le clic sur une réponse
 function handleAnswerClick(event) {
   const reponseChoisieText = event.target.textContent;
-
   const currentQuestion = questions[currentQuestionIndex];
   const selectedReponse = currentQuestion.reponses.find(r => r.texte === reponseChoisieText);
 
@@ -78,28 +68,10 @@ function handleAnswerClick(event) {
   }
 }
 
-function afficherReponses() {
-  const container = document.querySelector('.questionnaire-container');
-  container.innerHTML = `
-    <h2>Merci d'avoir complété le questionnaire ! 🎉</h2>
-    <p>Voici un récapitulatif de vos réponses :</p>
-  `;
-
-  const listeReponses = document.createElement('ul');
-
-  userAnswers.forEach((reponse, index) => {
-    const item = document.createElement('li');
-    item.textContent = `${index + 1}. ${reponse.question} ➔ ${reponse.reponse}`;
-    listeReponses.appendChild(item);
-  });
-
-  container.appendChild(listeReponses);
-}
-
 // Fonction pour afficher un message de fin
 function showEndMessage() {
   const container = document.querySelector('.questionnaire-container');
-  
+
   const recapHtml = userAnswers.map(answer => `
     <li><strong>Question :</strong> ${answer.question}<br><strong>Réponse :</strong> ${answer.reponseTexte}</li>
   `).join('');
@@ -118,17 +90,40 @@ function showEndMessage() {
       <p>Ne vous découragez pas, chaque geste compte ! 🌍</p>
     </div>
   `;
+
+  // 🔥 NOUVEAU : Envoyer à la base de données via PHP
+  envoyerReponsesEnBDD(totalScore);
 }
 
-// Lancer l'initialisation au chargement de la page
+// Fonction pour envoyer les réponses à PHP
+function envoyerReponsesEnBDD(totalScore) {
+  const dataToSend = {
+    id_utilisateur: 'U_TEST', // <-- ID correct maintenant
+    reponses: userAnswers,
+    score_total: totalScore
+  };
+
+  fetch('envoyer_reponses.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(dataToSend)
+  })
+  .then(response => response.text())
+  .then(data => {
+    console.log('✅ Données envoyées avec succès:', data);
+  })
+  .catch(error => {
+    console.error('❌ Erreur lors de l\'envoi des données:', error);
+  });
+}
+
+// Lancer au chargement
 document.addEventListener('DOMContentLoaded', () => {
   loadQuestions();
-
-  // Ajouter un écouteur sur TOUS les boutons réponse
   const answerButtons = document.querySelectorAll('.answer-button');
   answerButtons.forEach(button => {
     button.addEventListener('click', handleAnswerClick);
   });
 });
-
-console.log("Réponses de l'utilisateur :", userAnswers);
