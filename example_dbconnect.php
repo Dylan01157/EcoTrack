@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$dbname = "ecotrackdb";
+$dbname = "ecotrackDB";
 $username = "root";
 $password = "";
 
