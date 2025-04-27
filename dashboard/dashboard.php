@@ -60,7 +60,7 @@ $conn->close();
       <div class="header-icons">
         <a href="" class="bi bi-bell"></a>
         <a href="" class="bi bi-gear-fill"></a>
-        <a href="../connexion/index.html" class="bi bi-person-circle"></a>
+        <a href="../connexion/connexion.php" class="bi bi-person-circle"></a>
       </div>
       <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
     </div>
