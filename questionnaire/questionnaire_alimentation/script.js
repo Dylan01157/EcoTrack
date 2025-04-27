@@ -5,7 +5,7 @@ function toggleSidebar() {
   overlay.classList.toggle('active');
 }
 
-// Animation au scroll
+
 const faders = document.querySelectorAll('[data-animate]');
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
@@ -19,21 +19,21 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// === Ton ancien code sidebar / animation reste inchangé ===
 
-// Variables globales
+
+
 let questions = [];
 let currentQuestionIndex = 0;
 let userAnswers = [];
 
-// Fonction pour charger les questions depuis le JSON
+
 async function loadQuestions() {
   const response = await fetch('questions.json');
   questions = await response.json();
   showQuestion();
 }
 
-// Fonction pour afficher une question
+
 function showQuestion() {
   const question = questions[currentQuestionIndex];
   const questionTitle = document.querySelector('.question-block h2');
@@ -47,7 +47,7 @@ function showQuestion() {
   });
 }
 
-// Fonction pour gérer le clic sur une réponse
+
 function handleAnswerClick(event) {
   const reponseChoisieText = event.target.textContent;
   const currentQuestion = questions[currentQuestionIndex];
@@ -68,7 +68,7 @@ function handleAnswerClick(event) {
   }
 }
 
-// Fonction pour afficher un message de fin
+
 function showEndMessage() {
   const container = document.querySelector('.questionnaire-container');
 
@@ -77,6 +77,11 @@ function showEndMessage() {
   `).join('');
 
   const totalScore = userAnswers.reduce((acc, curr) => acc + curr.points, 0);
+  
+  // Conversion du score en équivalent CO2 (approximatif)
+  // Plus le score est élevé, moins il y a d'émission de CO2
+  // On suppose qu'un score de 70 représente ~0 kg CO2 et un score de 0 représente ~1000 kg CO2
+  const scoreCO2 = Math.round((70 - totalScore) * (1000 / 70));
 
   container.innerHTML = `
     <h2>Merci d'avoir complété le questionnaire ! 🎉</h2>
@@ -87,16 +92,17 @@ function showEndMessage() {
     <div class="score-final">
       <h3>Votre Score 🌱</h3>
       <p>${totalScore} / 70 points</p>
+      <p>Votre empreinte carbone estimée : <strong>${scoreCO2} kg CO2</strong></p>
       <p>Ne vous découragez pas, chaque geste compte ! 🌍</p>
     </div>
     <a href="/dashboard/dashboard.html" class="btn btn-primary mt-3">Retour au Dashboard</a>
   `;
 
-  // 🔥 NOUVEAU : Envoyer à la base de données via PHP
+
   envoyerReponsesEnBDD(totalScore);
 }
 
-// Fonction pour envoyer les réponses à PHP
+
 function envoyerReponsesEnBDD(totalScore) {
   const dataToSend = {
     id_utilisateur: window.userId || 'U_TEST', // Utilise l'ID de l'utilisateur de la session ou U_TEST par défaut
@@ -120,7 +126,7 @@ function envoyerReponsesEnBDD(totalScore) {
   });
 }
 
-// Lancer au chargement
+
 document.addEventListener('DOMContentLoaded', () => {
   loadQuestions();
   const answerButtons = document.querySelectorAll('.answer-button');
