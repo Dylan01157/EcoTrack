@@ -1,0 +1,72 @@
+[
+    {
+      "id": "question_alimentation_1",
+      "question": "Avez-vous consommé de la viande ou du poisson aujourd'hui ?",
+      "reponses": [
+        { "texte": "Non", "points": 10 },
+        { "texte": "Oui, en petite quantité", "points": 7 },
+        { "texte": "Oui, en quantité moyenne", "points": 4 },
+        { "texte": "Oui, en grande quantité", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_alimentation_2",
+      "question": "Privilégiez-vous les produits locaux ou de saison aujourd'hui ?",
+      "reponses": [
+        { "texte": "Oui, uniquement local", "points": 10 },
+        { "texte": "Oui, en majorité local", "points": 7 },
+        { "texte": "Un peu, sans faire attention", "points": 4 },
+        { "texte": "Pas du tout", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_alimentation_3",
+      "question": "Avez-vous cuisiné à partir de produits frais aujourd'hui ?",
+      "reponses": [
+        { "texte": "Oui, 100% frais", "points": 10 },
+        { "texte": "Majoritairement frais", "points": 7 },
+        { "texte": "Un peu de frais, beaucoup de préparé", "points": 4 },
+        { "texte": "Uniquement des plats préparés", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_alimentation_4",
+      "question": "Avez-vous gaspillé de la nourriture aujourd'hui ?",
+      "reponses": [
+        { "texte": "Pas du tout", "points": 10 },
+        { "texte": "Un peu", "points": 7 },
+        { "texte": "Beaucoup", "points": 4 },
+        { "texte": "Énormément", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_alimentation_5",
+      "question": "Quelle boisson avez-vous principalement consommée aujourd'hui ?",
+      "reponses": [
+        { "texte": "Eau du robinet", "points": 10 },
+        { "texte": "Eau en bouteille", "points": 7 },
+        { "texte": "Soda", "points": 4 },
+        { "texte": "Jus industriel", "points": 1 }
+      ]
+    },
+    {
+      "id": "question_alimentation_6",
+      "question": "Avez-vous consommé un repas végétarien aujourd'hui ?",
+      "reponses": [
+        { "texte": "Oui, toute la journée", "points": 10 },
+        { "texte": "Oui, un repas", "points": 7 },
+        { "texte": "Non", "points": 4 },
+        { "texte": "Je ne sais pas", "points": 1 }
+      ]
+    },
+    {
+        "id": "question_alimentation_7",
+        "question": "Quel type de contenant réutilisable avez-vous utilisé aujourd'hui ?",
+        "reponses": [
+          { "texte": "Verre ou céramique", "points": 10 },
+          { "texte": "Acier inoxydable", "points": 8 },
+          { "texte": "Plastique réutilisable", "points": 5 },
+          { "texte": "Jetable (non réutilisable)", "points": 1 }
+        ]
+      }
+]

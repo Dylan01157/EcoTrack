@@ -302,4 +302,62 @@
     border-radius: 15px;
     object-fit: cover;
   }
+  .navigation-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
   
+  .navigation-buttons button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  /* === Style du récapitulatif et du score === */
+
+.recapitulatif {
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recapitulatif h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.recapitulatif ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recapitulatif li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.score-final {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.score-final h3 {
+  font-size: 2rem;
+  color: #2c7a7b; /* joli vert bleuté */
+  margin-bottom: 1rem;
+}
+
+.score-final p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
