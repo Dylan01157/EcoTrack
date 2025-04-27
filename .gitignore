@@ -1,0 +1,19 @@
+# Fichiers de configuration de la base de données
+db_connect.php
+config.php
+*.conf.php
+
+# Variables d'environnement
+.env
+
+# Dossiers et fichiers générés
+/vendor/
+/node_modules/
+/logs/
+*.log
+
+# Fichiers IDE et éditeurs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
