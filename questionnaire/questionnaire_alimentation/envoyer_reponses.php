@@ -1,6 +1,6 @@
 <?php
 // Inclure la connexion à la base de données
-require_once '../../db_connect.php'; // <-- adapte bien ce chemin si besoin
+require_once '../../example_dbconnect.php'; // <-- adapte bien ce chemin si besoin
 
 // Activer l'affichage des erreurs PDO
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -36,4 +36,3 @@ if ($data && isset($data['id_utilisateur']) && isset($data['reponses']) && isset
 } else {
     echo "❌ Données invalides reçues.";
 }
-?>
