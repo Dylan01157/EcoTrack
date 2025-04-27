@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$dbname = 'ecotrackDB';
-$username = 'root';
-$password = '';
+$host = "localhost";
+$dbname = "ecotrackdb";
+$username = "root";
+$password = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
@@ -11,4 +11,3 @@ try {
 } catch (PDOException $e) {
     die("Erreur de connexion : " . $e->getMessage());
 }
-?>

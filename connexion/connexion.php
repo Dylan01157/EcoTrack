@@ -1,14 +1,10 @@
 <?php
-// Connexion à la base de données
-$host = "localhost";
-$dbname = "ecotrackDB"; // Nom de la base de données
-$username = "root";
-$password = ""; // Mot de passe de la base de données
+require_once __DIR__ . '/../example_dbconnect.php';
 
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=ecotrackdb", "root", "");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
     // Requête pour récupérer tous les utilisateurs (en supposant qu'il y en a plusieurs)
     $stmt = $pdo->prepare("SELECT * FROM Utilisateur");
     $stmt->execute();
@@ -25,4 +21,3 @@ try {
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
-?>
