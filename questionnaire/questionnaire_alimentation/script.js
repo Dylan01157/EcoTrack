@@ -89,6 +89,7 @@ function showEndMessage() {
       <p>${totalScore} / 70 points</p>
       <p>Ne vous découragez pas, chaque geste compte ! 🌍</p>
     </div>
+    <a href="/dashboard/dashboard.html" class="btn btn-primary mt-3">Retour au Dashboard</a>
   `;
 
   // 🔥 NOUVEAU : Envoyer à la base de données via PHP
@@ -98,7 +99,7 @@ function showEndMessage() {
 // Fonction pour envoyer les réponses à PHP
 function envoyerReponsesEnBDD(totalScore) {
   const dataToSend = {
-    id_utilisateur: 'U_TEST', // <-- ID correct maintenant
+    id_utilisateur: window.userId || 'U_TEST', // Utilise l'ID de l'utilisateur de la session ou U_TEST par défaut
     reponses: userAnswers,
     score_total: totalScore
   };
