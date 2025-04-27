@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$id_utilisateur = isset($_SESSION['id_utilisateur']) ? $_SESSION['id_utilisateur'] : 'U_TEST';
+?>
 <!-- Si besoin pour récupérer le header et la sidebar il suffit de prendre le code d'ici à...() -->
 <html lang="fr">
 <head>
@@ -11,6 +15,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script>
+    // Variable globale pour l'ID utilisateur
+    var userId = "<?php echo $id_utilisateur; ?>";
+  </script>
 </head>
 <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
