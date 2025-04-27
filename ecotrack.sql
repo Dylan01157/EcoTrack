@@ -16,8 +16,9 @@ CREATE TABLE Utilisateur (
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     mail VARCHAR(150) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL,  -- Ajout du champ pour le mot de passe
     FOREIGN KEY(id_entreprise) REFERENCES Entreprise(id_entreprise)
-); 
+);
 
 CREATE TABLE Badge (
     id_badge VARCHAR(50) PRIMARY KEY,

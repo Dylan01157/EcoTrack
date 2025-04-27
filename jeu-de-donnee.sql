@@ -4,11 +4,12 @@ INSERT INTO Entreprise (id_entreprise, nom_entreprise, secteur_activite, taille)
 ('E002', 'GreenTech', 'Technologies écologiques', 'Moyenne'),
 ('E003', 'BioCorp', 'Industrie bio', 'Petite');
 
--- Insertion de données dans la table Utilisateur
-INSERT INTO Utilisateur (id_utilisateur, id_entreprise, nom, prenom, mail) VALUES
-('U001', 'E001', 'Durand', 'Pierre', 'pierre.durand@ecosolutions.com'),
-('U002', 'E002', 'Lemoine', 'Sophie', 'sophie.lemoine@greentech.com'),
-('U003', 'E003', 'Meyer', 'Julien', 'julien.meyer@biocorp.com');
+
+-- Insertion de données dans la table Utilisateur avec mots de passe
+INSERT INTO Utilisateur (id_utilisateur, id_entreprise, nom, prenom, mail, mot_de_passe) VALUES
+('U001', 'E001', 'Durand', 'Pierre', 'pierre.durand@ecosolutions.com', 'hash_pierre123'),  -- Exemple de mot de passe hashé
+('U002', 'E002', 'Lemoine', 'Sophie', 'sophie.lemoine@greentech.com', 'hash_sophie456'), -- Exemple de mot de passe hashé
+('U003', 'E003', 'Meyer', 'Julien', 'julien.meyer@biocorp.com', 'hash_julien789'); -- Exemple de mot de passe hashé
 
 -- Insertion de données dans la table Badge
 INSERT INTO Badge (id_badge, nom_badge, description) VALUES
@@ -45,6 +46,9 @@ INSERT INTO Categorie (id_categorie, nom_categorie, description_categorie, score
 ('C001', 'Énergie', 'Catégorie liée à la consommation d’énergie et aux réductions', 100.0),
 ('C002', 'Recyclage', 'Catégorie liée à la gestion des déchets et au recyclage', 50.0),
 ('C003', 'Transport', 'Catégorie liée à l’impact écologique des moyens de transport', 75.0);
+('C004', 'Recyclage', 'Catégorie liée à la gestion des déchets et au recyclage', 50.0),
+('C005', 'Transport', 'Catégorie liée à l’impact écologique des moyens de transport', 75.0),
+('C006', 'Mobilité Durable', 'Catégorie liée à l’utilisation de moyens de transport durables', 60.0);
 
 -- Insertion de données dans la table Questionnaire
 INSERT INTO Questionnaire (id_questionnaire, nom_questionnaire, date_debut, date_fin) VALUES
@@ -88,6 +92,8 @@ INSERT INTO Suivi_Quotidien (id_suivi, id_utilisateur, id_questionnaire, date_jo
 INSERT INTO Score_Hebdomadaire (id_score, id_utilisateur, id_categorie, semaine_iso, score_total) VALUES
 (1, 'U001', 'C001', '2025-W13', 100),
 (2, 'U002', 'C002', '2025-W13', 60);
-
+(3, 'U001', 'C004', '2025-W13', 80),  -- Score pour Recyclage
+(4, 'U001', 'C005', '2025-W13', 120), -- Score pour Transport
+(5, 'U001', 'C006', '2025-W13', 90);  -- Score pour Mobilité Durable
 
 

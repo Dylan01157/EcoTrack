@@ -47,12 +47,13 @@ header {
   color: #333;
 }
 
-.header-icons i {
+.header-icons a {
+  color: #333;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
-.header-icons i:hover {
+.header-icons a:hover {
   color: #6366f1;
 }
 
@@ -233,28 +234,32 @@ section {
   user-select: none;
 }
 
-.card {
-  margin: 0 auto; /* Centrer les cartes */
+/* Style des cartes de score */
+.score-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.score-card {
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-.card img {
-  border-radius: 10px 10px 0 0; /* Arrondir les coins de l'image */
+.score-content {
+  margin-bottom: 15px;
 }
 
-.card-body {
-  padding: 1.25rem;
+.score-text {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.btn-primary {
-  background-color: #6366f1;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  background-color: #4f46e5;
+.score-footer {
+  font-size: 16px;
+  color: #333;
 }

@@ -47,12 +47,13 @@
     color: #333;
   }
   
-  .header-icons i {
+  .header-icons a {
+    color: #333;
     cursor: pointer;
     transition: color 0.2s ease;
   }
   
-  .header-icons i:hover {
+  .header-icons a:hover {
     color: #6366f1;
   }
   

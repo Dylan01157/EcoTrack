@@ -5,12 +5,6 @@
     padding: 0;
   }
   
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
   header {
     background-color: white;
     color: #1f2937;
@@ -47,12 +41,13 @@
     color: #333;
   }
   
-  .header-icons i {
+  .header-icons a {
+    color: #333;
     cursor: pointer;
     transition: color 0.2s ease;
   }
   
-  .header-icons i:hover {
+  .header-icons a:hover {
     color: #6366f1;
   }
   

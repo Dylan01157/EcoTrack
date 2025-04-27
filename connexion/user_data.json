@@ -1,0 +1,26 @@
+[
+    {
+        "id_utilisateur": "U001",
+        "id_entreprise": "E001",
+        "nom": "Durand",
+        "prenom": "Pierre",
+        "mail": "pierre.durand@ecosolutions.com",
+        "mot_de_passe": "hash_pierre123"
+    },
+    {
+        "id_utilisateur": "U002",
+        "id_entreprise": "E002",
+        "nom": "Lemoine",
+        "prenom": "Sophie",
+        "mail": "sophie.lemoine@greentech.com",
+        "mot_de_passe": "hash_sophie456"
+    },
+    {
+        "id_utilisateur": "U003",
+        "id_entreprise": "E003",
+        "nom": "Meyer",
+        "prenom": "Julien",
+        "mail": "julien.meyer@biocorp.com",
+        "mot_de_passe": "hash_julien789"
+    }
+]
