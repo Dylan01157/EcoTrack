@@ -233,44 +233,28 @@ section {
   user-select: none;
 }
 
-.cards-container {
-  display: flex;
-  justify-content: space-between; /* Espace entre les cards */
-  gap: 1rem; /* Espacement entre les cards */
-  margin: 2rem 0; /* Marges autour du conteneur */
-}
-
 .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  width: 22%; /* Chaque card occupe environ 1/4 de la largeur */
-  text-align: center;
-  position: relative; /* Nécessaire pour positionner le logo */
-  min-height: 200px; /* Augmente la hauteur minimale des cards */
+  margin: 0 auto; /* Centrer les cartes */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+.card img {
+  border-radius: 10px 10px 0 0; /* Arrondir les coins de l'image */
 }
 
-.card-header h3 {
-  font-size: 1.2rem;
-  margin: 0;
+.card-body {
+  padding: 1.25rem;
 }
 
-.card-header a {
-  width: 30px; /* Taille du logo */
-  height: 30px;
+.btn-primary {
+  background-color: #6366f1;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-.card p {
-  font-size: 1rem;
-  color: #333;
-  margin: 0;
+.btn-primary:hover {
+  background-color: #4f46e5;
 }
