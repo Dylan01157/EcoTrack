@@ -101,9 +101,6 @@ CREATE TABLE Bonne_Reponse (
 );
 
 
-
-
-
 CREATE TABLE Reponse (
     id_reponse VARCHAR(50) PRIMARY KEY,
     id_question VARCHAR(50),
@@ -170,10 +167,3 @@ CREATE TABLE Score_Hebdomadaire (
     FOREIGN KEY(id_categorie) REFERENCES Categorie(id_categorie)
 );
 
- 
-/* Script d'insertion de données pour la base de données EcoTrack
--- Ce script insère des données d'exemple dans les tables créées ci-dessus pour tester l'application EcoTrack
- 
- 
- 
- 
