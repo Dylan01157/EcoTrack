@@ -1,13 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ecotrackDB";
+require_once __DIR__ . '/../example_dbconnect.php';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
+  die("La connexion a échoué : " . $conn->connect_error);
 }
 
 $sql = "
@@ -23,11 +20,11 @@ $result = $conn->query($sql);
 // Stocker les résultats dans un tableau
 $categories = [];
 if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $categories[] = $row;
-    }
+  while ($row = $result->fetch_assoc()) {
+    $categories[] = $row;
+  }
 } else {
-    $categories = [];
+  $categories = [];
 }
 
 
@@ -38,6 +35,7 @@ $conn->close();
 <!DOCTYPE html>
 <!-- Si besoin pour récupérer le header et la sidebar il suffit de prendre le code d'ici à...() -->
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,12 +57,12 @@ $conn->close();
     <div class="logo"><img src="../images/logo.png" alt="Logo"></div>
     <div>Dashboard</div>
     <div class="header-right">
-        <div class="header-icons">
-          <a href="" class="bi bi-bell"></a>
-          <a href="" class="bi bi-gear-fill"></a>
-          <a href="../connexion/index.html" class="bi bi-person-circle"></a>
-        </div>
-        <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+      <div class="header-icons">
+        <a href="" class="bi bi-bell"></a>
+        <a href="" class="bi bi-gear-fill"></a>
+        <a href="../connexion/index.html" class="bi bi-person-circle"></a>
+      </div>
+      <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
     </div>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -75,12 +73,12 @@ $conn->close();
     <form class="search-form" action="/recherche" method="get">
       <input class="form-control" type="text" name="q" placeholder="Rechercher...">
     </form>
-  
+
     <div class="buton">
       <a href="/EcoTrack/dashboard/dashboard.php" class="menu-item"><i class="bi bi-house-door me-2"></i> Dashboard</a>
       <a href="../questionnaire/index.html" class="menu-item"><i class="bi bi-ui-checks me-2"></i> Questionnaire</a>
       <a href="../classement/index.html" class="menu-item"><i class="bi bi-bar-chart-line me-2"></i> Classement</a>
-  
+
       <div class="accordion" id="accordionSidebar">
         <div class="accordion-item bg-transparent border-0">
           <div class="accordion-header">
@@ -88,7 +86,7 @@ $conn->close();
               <i class="bi bi-folder me-2"></i> Catégories
             </a>
           </div>
-  
+
           <div id="collapsePage2" class="accordion-collapse collapse">
             <div class="accordion-body p-0 ps-4">
               <a class="dropdown-item menu-item" href="../categories/categorie_alimentation/">alimentation</a>
@@ -101,33 +99,34 @@ $conn->close();
           </div>
         </div>
       </div>
-  
+
       <a href="../profil/index.html" class="menu-item"><i class="bi bi-person-circle me-2"></i> Profil</a>
     </div>
   </nav>
   <main class="content">
-  <div class="cards-container">
-    <?php
-    $cardIndex = 1;
-    if (!empty($categories)) {
+    <div class="cards-container">
+      <?php
+      $cardIndex = 1;
+      if (!empty($categories)) {
         foreach ($categories as $categorie) {
-            echo '
+          echo '
             <div class="card" id="card' . $cardIndex . '" style="width: 18rem; margin: 10px;">
                 <div class="card-body">
                     <h5 class="card-title">' . htmlspecialchars($categorie['nom_categorie']) . '</h5>
                     <p class="card-text">Score: ' . htmlspecialchars($categorie['score_total']) . '</p>
                 </div>
             </div>';
-            $cardIndex++;
+          $cardIndex++;
         }
-    } else {
+      } else {
         echo "Aucun score trouvé pour Pierre.";
-    }
-    ?>
-  </div>
-</main>
+      }
+      ?>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
