@@ -56,7 +56,7 @@ $conn->close();
 
 <body>
   <header>
-    <div class="logo"><img src="/images/logo.png" alt="Logo"></div>
+    <div class="logo"><img src="../images/logo.png" alt="Logo"></div>
     <div>Dashboard</div>
     <div class="header-right">
         <div class="header-icons">
