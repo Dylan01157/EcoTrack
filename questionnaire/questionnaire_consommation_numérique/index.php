@@ -23,7 +23,7 @@ $userId = isset($_SESSION['id_utilisateur']) ? $_SESSION['id_utilisateur'] : 'U_
 
 <body>
     <header>
-        <div class="logo"><img src="/images/logo.png" alt="Logo"></div>
+        <div class="logo"><img src="../../images/logo.png" alt="Logo"></div>
         <div>questionnaire</div>
         <div class="header-right">
             <div class="header-icons">
@@ -97,7 +97,7 @@ $userId = isset($_SESSION['id_utilisateur']) ? $_SESSION['id_utilisateur'] : 'U_
 
                     <!-- Colonne droite : l'image -->
                     <div class="image-block">
-                        <img src="/images/foret.jpg" alt="Image illustrant la question">
+                        <img src="../../images/banner_questionnaire.png" alt="Image illustrant la question">
                     </div>
 
                 </div>

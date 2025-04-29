@@ -103,7 +103,7 @@ $id_utilisateur = $_SESSION['id_utilisateur'];
 
                     <!-- Colonne droite : l'image -->
                     <div class="image-block">
-                        <img src="/images/foret.jpg" alt="Image illustrant la question">
+                        <img src="../../images/banner_questionnaire.png" alt="Image illustrant la question">" alt="Image illustrant la question">
                     </div>
 
                 </div>
