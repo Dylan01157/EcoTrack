@@ -70,6 +70,8 @@
 
 ![Screenshot](images_docs/Capture_decran_2025_05_02_104941.png)
 
+![Fonctionnalités](images_docs/Capture_decran_2025_05_02_130041.png)
+
 
 
 
