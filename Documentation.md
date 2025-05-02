@@ -6,7 +6,7 @@
 2. [Base de Données (BDD)](./BDD.md)  
    Structure et organisation des tables de la base de données.
 
-3. [Arborescence d'EcoTrack](./Ecotrack_structure.md)  
+3. [Arborescence d'EcoTrack](./EcoTrack_structure.md)  
    Vue d'ensemble de l'organisation des fichiers et dossiers du projet.
 
 4. [Flux de Connexion](./Flux_Connexion.md)  
