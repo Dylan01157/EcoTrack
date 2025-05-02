@@ -1,4 +1,4 @@
-![Screenshot](EcoTrack\images_docs\Capture d'écran 2025-05-02 104404.png)
+![Screenshot](EcoTrack/images_docs/Capture d'écran 2025-05-02 104404.png)
 
 ![Screenshot](EcoTrack\images_docs\Capture d'écran 2025-05-02 104417.png)
 
