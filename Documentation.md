@@ -26,3 +26,6 @@
 
 9. [Technologies Utilisées](./technos.md)  
    Description des technologies et outils utilisés pour le développement du projet.
+
+9. [Images du projet](./images.md)  
+   Screenshot et MCD du projet
